@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reza-Ali Sheriff - Portfolio & CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: #f0f0f0; /* Light background for contrast */
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #24292e;
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            animation: fadeIn 1s ease-in;
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        nav {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        nav a {
+            color: #61dafb;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        section {
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 3px solid #61dafb;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        /* About Section */
+        #about {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            animation: slideIn 1s ease-in;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Skills Section */
+        #skills {
+            background: #4CAF50; /* Green background for skills section */
+            color: #fff;
+            padding: 2rem 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            text-align: center;
+            padding: 0 1rem; /* Padding for responsiveness */
+        }
+
+        .skill-item {
+            background: #388E3C; /* Darker green for skill items */
+            padding: 1.5rem;
+            border-radius: 5px;
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            font-weight: bold;
+        }
+
+        .skill-item:hover {
+            transform: scale(1.05); /* Slightly enlarges the item on hover */
+        }
+
+        /* Projects Section */
+        #projects {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .project-item {
+            margin: 1rem 0;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .project-description {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: display 0.3s ease;
+        }
+
+        .project-item:hover .project-description {
+            display: block;
+        }
+
+        /* Education Section */
+        #education {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .education-item {
+            margin: 1rem 0;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #24292e;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Reza-Ali Sheriff</h1>
+        <p>Web Developer & Designer</p>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p>Information Technology and Financial Technology enthusiast with a focus on programming, cloud integration, and emerging technologies. Aspiring software developer with hands-on experience in various projects.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Java</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">AWS</div>
+                <div class="skill-item">Power BI</div>
+                <div class="skill-item">MS Office</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-item">
+                <h3>Library Management System (JAVA)</h3>
+                <div class="project-description">
+                    <p>Developed a basic Java application to manage library books, allowing users to add, remove, and search for books. Implemented features for tracking borrowed books using file handling for data storage.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <h3>Static Website Hosting with AWS S3</h3>
+                <div class="project-description">
+                    <p>Designed and deployed a static website using HTML, CSS, and JavaScript on Amazon S3 for hosting. Configured CloudFront for global content delivery and Route 53 for domain name management.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <h3>City Center Service (PYTHON)</h3>
+                <div class="project-description">
+                    <p>Developed a Python-based platform offering home services, including AC servicing and furniture repairs. Designed functionalities for service booking and integrated user authentication.</p </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <strong>Bachelor of Science in Information Technology (FinTech)</strong><br>
+                Gujarat University | 2022–2025
+            </div>
+            <div class="education-item">
+                <strong>Secondary and Higher Secondary Education (Commerce)</strong><br>
+                St. Xavier’s High School | Completed in 2022
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates">
+        <div class="container">
+            <h2 class="section-title">Certificates</h2>
+            <div class="education-item">
+                <strong>AWS Certified Cloud Practitioner (Training)</strong><br>
+                Completed via Intellipaat | January 2025
+            </div>
+            <div class="education-item">
+                <strong>Java Programming Certification</strong><br>
+                Completed via Simplilearn | January 2025
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Reza-Ali Sheriff. All rights reserved.</p>
+    </footer>
+</body>
+</html>
